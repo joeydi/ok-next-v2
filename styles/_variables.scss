@@ -1,0 +1,24 @@
+// Colors
+$white: #f0f0f0;
+$black: #0f0f24;
+$mint: #1cffd6;
+
+// Fonts
+
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+// Breakpoints
+
+$xxs: 0;
+$xs: 375px;
+$sm: 480px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1960px;
+
+// Spacing
+
+$container-padding: clampValues(20, 180, $sm, $xxl);

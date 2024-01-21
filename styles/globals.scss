@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "@/styles/functions";
+@import "@/styles/variables";
+@import "@/styles/mixins";
+@import "@/styles/typography";
+
+:root {
+    --font-sans: industry, sans-serif;
+    --font-mono: source-code-pro, monospace;
+}
+
+.container {
+    max-width: 1960px;
+    padding: 0 $container-padding;
+}
+
+main {
+    min-height: 400vh;
+    overflow: hidden;
+}

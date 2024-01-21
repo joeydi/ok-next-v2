@@ -1,0 +1,31 @@
+body {
+    font-size: clampValues(16, 18, $sm, $xl);
+}
+
+h1 {
+    text-transform: uppercase;
+    font-weight: $font-weight-bold;
+    font-size: clampValues(30, 80, $sm, $xxl);
+}
+
+h2 {
+    font-size: clampValues(24, 64, $sm, $xl);
+}
+
+h3 {
+    font-size: clampValues(20, 54, $sm, $xl);
+}
+
+h4,
+h5,
+h6 {
+    font-size: clampValues(18, 48, $sm, $xl);
+}
+
+p {
+    margin-bottom: 1em;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

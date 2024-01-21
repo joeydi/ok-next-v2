@@ -1,0 +1,28 @@
+@import "@/styles/functions";
+@import "@/styles/variables";
+@import "@/styles/mixins";
+
+.footer {
+    padding: 50px 0;
+}
+
+.corner {
+    display: block;
+    position: fixed;
+    left: calc($container-padding - 70px);
+    bottom: 108px;
+    width: 50px;
+    height: 50px;
+    transform: rotate(180deg);
+    transition: opacity 0.5s;
+    opacity: 0;
+
+    @include lg {
+        opacity: 1;
+    }
+
+    @include xxl {
+        left: calc((100vw - $xxl) / 2 + $container-padding - 70px);
+        right: auto;
+    }
+}
