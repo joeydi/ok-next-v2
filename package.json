@@ -9,7 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "gsap": "^3.12.5",
+    "gsap": "npm:@gsap/shockingly@^3.12.5",
+    "mapbox-gl": "^3.1.0",
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18",

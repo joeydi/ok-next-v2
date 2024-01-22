@@ -54,6 +54,12 @@
     }
 }
 
+.navtoggle {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
 .navlinks {
     transition: transform 0.5s $ease-out;
 }

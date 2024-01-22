@@ -64,7 +64,7 @@ const projects = [
 export default function Portfolio() {
     return (
         <main>
-            <section className={`header-padding`}>
+            <section className="header-padding">
                 <div className="container">
                     <FadeIn>
                         <h1 className="text-mint">Portfolio</h1>

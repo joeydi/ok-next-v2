@@ -16,6 +16,7 @@ export default function Header() {
     const containerRef = useRef();
     const backdropRef = useRef();
     const navRef = useRef();
+    const navToggleRef = useRef();
     const navLinksRef = useRef();
     const linkHeight = 30;
     const links = [
@@ -48,6 +49,8 @@ export default function Header() {
                 scrub: true,
             },
         });
+
+        // timeline.fromTo(navToggleRef.current, {});
 
         timeline.to(
             headerRef.current,
@@ -117,6 +120,9 @@ export default function Header() {
             <div ref={containerRef} className="container relative">
                 <div className="grid grid-cols-2 gap-4">
                     <nav ref={navRef} className={styles.nav}>
+                        {/* <button ref={navToggleRef} className={`${styles.navtoggle} uppercase font-bold`}>
+                            Menu
+                        </button> */}
                         <div ref={navLinksRef} className={`${styles.navlinks} flex flex-col items-start`}>
                             {links.map((link, i) => (
                                 <Link

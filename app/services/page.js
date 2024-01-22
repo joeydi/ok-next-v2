@@ -4,7 +4,7 @@ import FadeIn from "@/components/FadeIn";
 export default function Services() {
     return (
         <main>
-            <section className={`header-padding`}>
+            <section className="header-padding">
                 <div className="container">
                     <FadeIn>
                         <h1 className="text-mint">Services</h1>

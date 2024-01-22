@@ -1,0 +1,29 @@
+.mapui {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    // outline: 1px solid red;
+}
+
+.topleft {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25%;
+    height: 25%;
+    transform: rotate(270deg);
+    opacity: 0;
+}
+
+.bottomright {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 25%;
+    height: 25%;
+    transform: rotate(90deg);
+    opacity: 0;
+}
