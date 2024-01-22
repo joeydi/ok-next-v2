@@ -1,19 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Epilogue, Source_Code_Pro } from "next/font/google";
 import "@/styles/globals.scss";
-
-const epilogue = Epilogue({
-    subsets: ["latin"],
-    display: "swap",
-    variable: "--font-epilogue",
-});
-
-const sourceCodePro = Source_Code_Pro({
-    subsets: ["latin"],
-    display: "swap",
-    variable: "--font-source-code-pro",
-});
 
 export const metadata = {
     title: "Create Next App",
@@ -23,10 +10,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
-            <head>
-                <link rel="stylesheet" href="https://use.typekit.net/gzr7byz.css" />
-            </head>
-            <body className={`${epilogue.variable} ${sourceCodePro.variable} bg-black text-white font-sans`}>
+            <body>
                 <Header />
                 {children}
                 <Footer />
