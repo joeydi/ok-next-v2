@@ -1,0 +1,11 @@
+.heading {
+    position: relative;
+    height: 150px;
+    // outline: 1px solid red;
+
+    h3 {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+}

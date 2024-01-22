@@ -53,34 +53,29 @@
 
 .nav {
     position: relative;
+    margin-top: -5px;
     height: 20px;
-
-    &:has(a:nth-child(1).active) a {
-    }
-
-    &:has(a:nth-child(2).active) a {
-        transform: translateY(-100%);
-    }
-
-    &:has(a:nth-child(3).active) a {
-        transform: translateY(-200%);
-    }
-
-    &:has(a:nth-child(4).active) a {
-        transform: translateY(-300%);
-    }
 
     &::before {
         content: "";
         position: absolute;
-        left: -20px;
-        top: 8px;
+        left: -16px;
+        top: 12px;
         display: block;
         width: 6px;
         height: 6px;
         border-radius: 50%;
         background-color: $mint;
     }
+}
+
+.navlinks {
+    transition: transform 0.5s $ease-out;
+}
+
+.link {
+    padding: 5px 0;
+    line-height: 20px;
 }
 
 .active {

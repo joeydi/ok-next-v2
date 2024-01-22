@@ -34,7 +34,7 @@ export default function Footer() {
 
     return (
         <footer className={styles.footer}>
-            <div className="container mx-auto relative">
+            <div className="container relative">
                 <p className="m-0 uppercase text-mint font-bold">&copy; 2024</p>
                 <svg ref={cornerRef} className={styles.corner} width="100px" height="100px" viewBox="0 0 100 100">
                     <polyline

@@ -1,17 +1,41 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import gsap from "gsap";
+import { Draggable } from "gsap/dist/Draggable";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import styles from "./Header.module.scss";
 
 export default function Header() {
+    const router = useRouter();
     const pathname = usePathname();
     const headerRef = useRef();
     const containerRef = useRef();
     const backdropRef = useRef();
+    const navRef = useRef();
+    const navLinksRef = useRef();
+    const linkHeight = 30;
+    const links = [
+        {
+            title: "Okay Plus",
+            href: "/",
+        },
+        {
+            title: "Portfolio",
+            href: "/portfolio",
+        },
+        {
+            title: "Services",
+            href: "/services",
+        },
+        {
+            title: "Contact",
+            href: "/contact",
+        },
+    ];
 
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
@@ -56,36 +80,56 @@ export default function Header() {
         return () => timeline.kill();
     }, []);
 
+    useEffect(() => {
+        gsap.registerPlugin(Draggable);
+
+        let activeIndex = 0;
+
+        Draggable.create(navLinksRef.current, {
+            type: "y",
+            bounds: navRef.current,
+            cursor: "grab",
+            activeCursor: "grabbing",
+            liveSnap: function (value) {
+                return Math.round(value / linkHeight) * linkHeight;
+            },
+            onDrag: function () {
+                const linkIndex = Math.abs(this.endY / linkHeight);
+
+                if (linkIndex !== activeIndex) {
+                    activeIndex = linkIndex;
+                    const link = links[activeIndex];
+                    router.replace(link.href);
+                }
+            },
+        });
+    }, []);
+
+    const clickHandler = (i) => {
+        gsap.set(navLinksRef.current, {
+            y: -linkHeight * i,
+        });
+    };
+
     return (
         <header ref={headerRef} className={styles.header}>
             <div ref={backdropRef} className={styles.backdrop}></div>
-            <div ref={containerRef} className="container mx-auto relative">
+            <div ref={containerRef} className="container relative">
                 <div className="grid grid-cols-2 gap-4">
-                    <nav className={styles.nav}>
-                        <Link
-                            className={`${pathname == "/" ? styles.active : ""} transition-all block uppercase font-bold`}
-                            href="/">
-                            Okay Plus
-                        </Link>
-                        <Link
-                            className={`${
-                                pathname == "/portfolio" ? styles.active : ""
-                            } transition-all block uppercase font-bold`}
-                            href="/portfolio">
-                            Portfolio
-                        </Link>
-                        <Link
-                            className={`${pathname == "/services" ? styles.active : ""} transition-all block uppercase font-bold`}
-                            href="/services">
-                            Services
-                        </Link>
-                        <Link
-                            className={`${pathname == "/contact" ? styles.active : ""} transition-all block uppercase font-bold`}
-                            href="/contact">
-                            Contact
-                        </Link>
+                    <nav ref={navRef} className={styles.nav}>
+                        <div ref={navLinksRef} className={`${styles.navlinks} flex flex-col items-start`}>
+                            {links.map((link, i) => (
+                                <Link
+                                    key={`link-${i}`}
+                                    className={`${styles.link} ${pathname == link.href ? styles.active : ""} uppercase font-bold`}
+                                    href={link.href}
+                                    onClick={() => clickHandler(i)}>
+                                    {link.title}
+                                </Link>
+                            ))}
+                        </div>
                     </nav>
-                    <p className="m-0 uppercase text-mint font-bold">Design &amp; Development For the Web</p>
+                    <p className="leading-5	m-0 uppercase text-mint font-bold text-right">Design &amp; Development For the Web</p>
                 </div>
                 <svg className={styles.corner} width="100px" height="100px" viewBox="0 0 100 100">
                     <polyline

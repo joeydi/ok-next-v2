@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -21,6 +23,10 @@ export default function Intro() {
 
         const distanceFactor = 40;
         const blurFactor = 10;
+
+        gsap.set([o, k, a, y, p, l, u, s], {
+            transformOrigin: "50% 50%",
+        });
 
         const timeline = gsap.timeline({
             scrollTrigger: {
@@ -47,6 +53,7 @@ export default function Intro() {
                 y: `+=${distanceFactor * 4}`,
                 filter: `blur(${blurFactor * 4}px)`,
                 ease: "none",
+                transformOrigin: "50% 50%",
             },
             0
         );
@@ -58,6 +65,7 @@ export default function Intro() {
                 y: `+=${distanceFactor * 3}`,
                 filter: `blur(${blurFactor * 3}px)`,
                 ease: "none",
+                transformOrigin: "50% 50%",
             },
             0
         );
@@ -69,6 +77,7 @@ export default function Intro() {
                 y: `+=${distanceFactor * 2}`,
                 filter: `blur(${blurFactor * 2}px)`,
                 ease: "none",
+                transformOrigin: "50% 50%",
             },
             0
         );
@@ -80,6 +89,7 @@ export default function Intro() {
                 y: `+=${distanceFactor * 1}`,
                 filter: `blur(${blurFactor * 1}px)`,
                 ease: "none",
+                transformOrigin: "50% 50%",
             },
             0
         );
@@ -91,6 +101,7 @@ export default function Intro() {
                 y: `-=${distanceFactor * 1}`,
                 filter: `blur(${blurFactor * 1}px)`,
                 ease: "none",
+                transformOrigin: "50% 50%",
             },
             0
         );
@@ -102,6 +113,7 @@ export default function Intro() {
                 y: `-=${distanceFactor * 2}`,
                 filter: `blur(${blurFactor * 2}px)`,
                 ease: "none",
+                transformOrigin: "50% 50%",
             },
             0
         );
@@ -113,6 +125,7 @@ export default function Intro() {
                 y: `-=${distanceFactor * 3}`,
                 filter: `blur(${blurFactor * 3}px)`,
                 ease: "none",
+                transformOrigin: "50% 50%",
             },
             0
         );
@@ -124,6 +137,7 @@ export default function Intro() {
                 y: `-=${distanceFactor * 4}`,
                 filter: `blur(${blurFactor * 4}px)`,
                 ease: "none",
+                transformOrigin: "50% 50%",
             },
             0
         );
@@ -132,7 +146,7 @@ export default function Intro() {
     }, []);
 
     return (
-        <section ref={introRef} className="section-padding h-screen flex flex-col">
+        <section ref={introRef} className="section-padding min-h-screen flex flex-col">
             <div className="my-auto">
                 <FadeIn>
                     <h1 className="relative w-[104%] mx-[-2%]">
@@ -190,7 +204,7 @@ export default function Intro() {
                     </h1>
                 </FadeIn>
             </div>
-            <div className="container mx-auto">
+            <div className="container">
                 <div className="grid grid-cols-12 items-end gap-4">
                     <div className="my-0 col-span-4 md:col-span-6">
                         <FadeIn delay="0.05">

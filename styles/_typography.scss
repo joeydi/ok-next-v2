@@ -4,9 +4,19 @@ body {
     color: $white;
 }
 
-h1 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 0.5em;
     text-transform: uppercase;
     font-weight: $font-weight-bold;
+    color: $mint;
+}
+
+h1 {
     font-size: clampValues(30, 80, $sm, $xxl);
 }
 
@@ -15,13 +25,13 @@ h2 {
 }
 
 h3 {
-    font-size: clampValues(20, 54, $sm, $xl);
+    font-size: clampValues(18, 48, $sm, $xl);
 }
 
 h4,
 h5,
 h6 {
-    font-size: clampValues(18, 48, $sm, $xl);
+    font-size: clampValues(18, 32, $sm, $xl);
 }
 
 p {

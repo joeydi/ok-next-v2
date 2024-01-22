@@ -1,6 +1,7 @@
 // Colors
 $white: #f0f0f0;
-$black: #0f0f24;
+$black: #000000;
+$dark-blue: #0f0f24;
 $mint: #1cffd6;
 
 // Fonts
@@ -22,3 +23,12 @@ $xxl: 1960px;
 // Spacing
 
 $container-padding: clampValues(20, 180, $sm, $xxl);
+
+// Easing
+
+$ease-in: cubic-bezier(0.5, 0, 1, 0.5);
+$ease-in-sharp: cubic-bezier(0.75, 0, 1, 0.25);
+$ease-out: cubic-bezier(0, 0.5, 0.5, 1);
+$ease-out-sharp: cubic-bezier(0, 0.75, 0.25, 1);
+$ease-in-out: cubic-bezier(0.5, 0, 0.5, 1);
+$ease-in-out-sharp: cubic-bezier(0.75, 0, 0.25, 1);

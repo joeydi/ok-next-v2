@@ -15,17 +15,23 @@
 }
 
 body {
-    background-color: $black;
+    background-color: $dark-blue;
 }
 
 .container {
     max-width: 1960px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0 $container-padding;
 }
 
 main {
-    min-height: 400vh;
+    min-height: 200vh;
     overflow: hidden;
+}
+
+.header-padding {
+    padding-top: clampValues(160, 300, $sm, $xl);
 }
 
 .section-padding {
