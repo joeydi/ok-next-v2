@@ -21,17 +21,17 @@ h1 {
 }
 
 h2 {
-    font-size: clampValues(24, 64, $sm, $xl);
+    font-size: clampValues(24, 64, $sm, $xxl);
 }
 
 h3 {
-    font-size: clampValues(18, 48, $sm, $xl);
+    font-size: clampValues(18, 48, $sm, $xxl);
 }
 
 h4,
 h5,
 h6 {
-    font-size: clampValues(18, 32, $sm, $xl);
+    font-size: clampValues(18, 32, $sm, $xxl);
 }
 
 p {

@@ -18,22 +18,7 @@
     position: absolute;
     inset: 0;
     opacity: 0;
-    background: linear-gradient(
-        to bottom,
-        hsl(240deg, 41%, 10%) 0%,
-        hsla(240deg, 41%, 10%, 0.738) 19%,
-        hsla(240deg, 41%, 10%, 0.541) 34%,
-        hsla(240deg, 41%, 10%, 0.382) 47%,
-        hsla(240deg, 41%, 10%, 0.278) 56.5%,
-        hsla(240deg, 41%, 10%, 0.194) 65%,
-        hsla(240deg, 41%, 10%, 0.126) 73%,
-        hsla(240deg, 41%, 10%, 0.075) 80.2%,
-        hsla(240deg, 41%, 10%, 0.042) 86.1%,
-        hsla(240deg, 41%, 10%, 0.021) 91%,
-        hsla(240deg, 41%, 10%, 0.008) 95.2%,
-        hsla(240deg, 41%, 10%, 0.002) 98.2%,
-        hsla(240deg, 41%, 10%, 0) 100%
-    );
+    @include scrimGradient($dark-blue, "to bottom");
 }
 
 .corner {
