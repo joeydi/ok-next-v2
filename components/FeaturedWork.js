@@ -8,16 +8,16 @@ export default function FeaturedWork() {
                 {/* <div className={styles.heading}>
                 </div> */}
                 <div className="panel min-h-screen section-padding flex flex-col justify-center">
-                    <h3>Columbia Capital</h3>
-                    <Image src="/columbia-capital.jpg" width="1755" height="1170" alt="" />
+                    <h2 className="h4">Columbia Capital</h2>
+                    <Image className="w-full" src="/columbia-capital.jpg" width="1755" height="1170" alt="" />
                 </div>
                 <div className="panel min-h-screen section-padding flex flex-col justify-center">
-                    <h3>Education Progress Meter</h3>
-                    <Image src="/efa-education-progress-meter.jpg" width="1755" height="1169" alt="" />
+                    <h2 className="h4">Education Progress Meter</h2>
+                    <Image className="w-full" src="/efa-education-progress-meter.jpg" width="1755" height="1169" alt="" />
                 </div>
                 <div className="panel min-h-screen section-padding flex flex-col justify-center">
-                    <h3>Steadkey Mortgage</h3>
-                    <Image src="/steadkey.jpg" width="1360" height="1020" alt="" />
+                    <h2 className="h4">Steadkey Mortgage</h2>
+                    <Image className="w-full" src="/steadkey.jpg" width="1360" height="1020" alt="" />
                 </div>
             </div>
         </section>

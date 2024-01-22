@@ -18,7 +18,7 @@
     position: absolute;
     inset: 0;
     opacity: 0;
-    @include scrimGradient($dark-blue, "to bottom");
+    @include scrimGradient($black, "to bottom");
 }
 
 .corner {
@@ -61,6 +61,7 @@
 .link {
     padding: 5px 0;
     line-height: 20px;
+    transition: color 0.25s;
 }
 
 .active {

@@ -1,6 +1,6 @@
 body {
     font-family: var(--font-sans);
-    font-size: clampValues(16, 18, $sm, $xl);
+    font-size: clampValues(16, 20, $sm, $xxl);
     color: $white;
 }
 
@@ -13,24 +13,31 @@ h6 {
     margin: 0 0 0.5em;
     text-transform: uppercase;
     font-weight: $font-weight-bold;
+    line-height: 1.1;
     color: $mint;
 }
 
-h1 {
+h1,
+.h1 {
     font-size: clampValues(30, 80, $sm, $xxl);
 }
 
-h2 {
+h2,
+.h2 {
     font-size: clampValues(24, 64, $sm, $xxl);
 }
 
-h3 {
+h3,
+.h3 {
     font-size: clampValues(18, 48, $sm, $xxl);
 }
 
 h4,
+.h4,
 h5,
-h6 {
+.h5,
+h6,
+.h6 {
     font-size: clampValues(18, 32, $sm, $xxl);
 }
 

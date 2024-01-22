@@ -1,0 +1,12 @@
+@import "@/styles/functions";
+@import "@/styles/variables";
+@import "@/styles/mixins";
+
+.overlay {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    @include scrimGradient($black, "to top");
+}

@@ -64,7 +64,7 @@ const projects = [
 export default function Portfolio() {
     return (
         <main>
-            <section className={`header-padding min-h-screen flex flex-col justify-center`}>
+            <section className={`header-padding`}>
                 <div className="container">
                     <FadeIn>
                         <h1 className="text-mint">Portfolio</h1>
@@ -76,7 +76,7 @@ export default function Portfolio() {
                                     <FadeIn key={`col-${i}`} delay={0.05 * i} className="sm:col-span-6 xl:col-span-4">
                                         <a className="block" href={project.link} target="_blank">
                                             <Image className="mb-6" src={project.image} width="800" height="561" alt="" />
-                                            <h4 className="mb-1 uppercase font-bold">{project.name}</h4>
+                                            <h4 className="mb-2 uppercase font-bold">{project.name}</h4>
                                             <p>{project.description}</p>
                                         </a>
                                     </FadeIn>

@@ -15,7 +15,7 @@
 }
 
 body {
-    background-color: $dark-blue;
+    background-color: $black;
 }
 
 .container {
@@ -26,12 +26,16 @@ body {
 }
 
 main {
-    min-height: 200vh;
+    min-height: 100vh;
     overflow: hidden;
 }
 
 .header-padding {
     padding-top: clampValues(160, 300, $sm, $xl);
+}
+
+.section-margin {
+    margin: clampValues(100, 200, $sm, $xl) 0;
 }
 
 .section-padding {

@@ -4,7 +4,7 @@ import FadeIn from "@/components/FadeIn";
 export default function Contact() {
     return (
         <main>
-            <section className={`header-padding min-h-screen flex flex-col justify-center`}>
+            <section className={`header-padding`}>
                 <div className="container">
                     <FadeIn>
                         <h1 className="text-mint">Contact</h1>
