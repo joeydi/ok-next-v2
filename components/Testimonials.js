@@ -42,7 +42,7 @@ export default function Testimonials() {
                         <div
                             key={`testimonial-${i}`}
                             className={`col-span-12 md:col-span-6 xl:col-span-5 ${i % 2 ? "xl:col-start-7" : ""}`}>
-                            <blockquote>
+                            <blockquote className="max-w-[480px]">
                                 <p className="text-pretty">{testimonial.quote}</p>
                                 <cite className="flex gap-4 items-center not-italic">
                                     <Image
