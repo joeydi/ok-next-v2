@@ -114,6 +114,16 @@ export default function Header() {
         });
     };
 
+    // Update navLinks position on pathname change
+    useEffect(() => {
+        const activeLinkIndex = links.findIndex(({ href }) => href === pathname);
+        if (activeLinkIndex !== -1) {
+            gsap.set(navLinksRef.current, {
+                y: -linkHeight * activeLinkIndex,
+            });
+        }
+    }, [pathname]);
+
     return (
         <header ref={headerRef} className={styles.header}>
             <div ref={backdropRef} className={styles.backdrop}></div>
