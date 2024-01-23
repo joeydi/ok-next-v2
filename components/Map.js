@@ -304,10 +304,6 @@ export default function Map() {
             initTimeline();
         });
 
-        mapboxMap.on("click", (e) => {
-            console.log(e.lngLat);
-        });
-
         return () => {
             mapboxMap.remove();
         };

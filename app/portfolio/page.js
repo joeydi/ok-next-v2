@@ -74,7 +74,7 @@ export default function Portfolio() {
                         <div className="grid grid-cols-12 gap-y-12 gap-x-6 lg:gap-x-12">
                             {projects.map((project, i) => {
                                 return (
-                                    <FadeIn key={`col-${i}`} delay={0.05 * i} className="col-span-12 md:col-span-6 xl:col-span-4">
+                                    <FadeIn key={`col-${i}`} delay={0.1 * i} className="col-span-12 md:col-span-6 xl:col-span-4">
                                         <Card href={project.link} target="_blank">
                                             <Image src={project.image} width="800" height="561" alt="" />
                                             <div className="p-8">

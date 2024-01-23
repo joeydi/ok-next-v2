@@ -12,8 +12,6 @@ export default function Contact() {
                     <FadeIn>
                         <h1 className="text-mint">Contact</h1>
                     </FadeIn>
-                    <FadeIn delay="0.1"></FadeIn>
-                    <div className="relative"></div>
                 </div>
             </section>
         </main>
