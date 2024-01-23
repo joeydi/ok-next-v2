@@ -21,7 +21,7 @@ export default function Services() {
                                     alt=""
                                 />
                                 <div className="p-8 pt-4">
-                                    <h2 class="h4">Design</h2>
+                                    <h2 className="h4">Design</h2>
                                     <p>
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                                         ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -40,7 +40,7 @@ export default function Services() {
                                     alt=""
                                 />
                                 <div className="p-8 pt-4">
-                                    <h2 class="h4">Development</h2>
+                                    <h2 className="h4">Development</h2>
                                     <p>
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                                         ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -59,7 +59,7 @@ export default function Services() {
                                     alt=""
                                 />
                                 <div className="p-8 pt-4">
-                                    <h2 class="h4">Maintenance</h2>
+                                    <h2 className="h4">Maintenance</h2>
                                     <p>
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                                         ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
