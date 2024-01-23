@@ -25,8 +25,25 @@ export default function Intro() {
         const blurFactor = 10;
 
         gsap.set([o, k, a, y, p, l, u, s], {
-            transformOrigin: "50% 50%",
+            transformOrigin: "0% 100%",
         });
+
+        gsap.fromTo(
+            [o, k, a, y, p, l, u, s],
+            {
+                scaleX: 0.5,
+                scaleY: 0.5,
+                opacity: 0,
+            },
+            {
+                scaleX: 1,
+                scaleY: 1,
+                opacity: 1,
+                duration: 0.75,
+                stagger: 0.0125,
+                ease: "expo.out",
+            }
+        );
 
         const timeline = gsap.timeline({
             scrollTrigger: {
@@ -207,12 +224,12 @@ export default function Intro() {
             <div className="container">
                 <div className="grid grid-cols-12 items-end gap-4">
                     <div className="my-0 col-span-4 md:col-span-6">
-                        <FadeIn delay="0.05">
+                        <FadeIn delay="0.1">
                             <p className="uppercase font-bold text-mint">Welcome</p>
                         </FadeIn>
                     </div>
                     <div className="col-span-8 md:col-span-6 max-w-[480px] relative">
-                        <FadeIn delay="0.1">
+                        <FadeIn delay="0.2">
                             <p>
                                 Elevating non-profits and startups to new heights with 15 years of design and development
                                 expertise.
