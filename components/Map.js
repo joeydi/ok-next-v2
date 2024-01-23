@@ -11,9 +11,6 @@ export default function Map() {
     const mapNode = useRef(null);
     const marker = useRef(null);
     const initial = [74.0179, 40.7044];
-    const newyork = [-74.0179, 40.7044];
-    const vermont = [-72.6798, 43.9215];
-    const burlington = [-73.1999, 44.4782];
     const office = [-73.2179, 44.4732];
     const topLeftCornerRef = useRef();
     const bottomRightCornerRef = useRef();
@@ -43,7 +40,7 @@ export default function Map() {
                 }
 
                 const delta = initialTimestamp - timestamp;
-                mapboxMap.rotateTo((delta / 100) % 360, { duration: 0 });
+                mapboxMap.rotateTo(((delta / -100) % 360) + 180, { duration: 0 });
             }
 
             // Request the next frame of the animation.
@@ -89,7 +86,7 @@ export default function Map() {
                 mapboxMap.flyTo({
                     center: office,
                     zoom: 4,
-                    speed: 0.5,
+                    duration: 3000,
                 });
             }, 0);
 
@@ -99,7 +96,7 @@ export default function Map() {
                     opacity: 1,
                     duration: 0.075,
                 },
-                3.5
+                3
             );
 
             timeline.to([topLeftCornerRef.current, bottomRightCornerRef.current], {
@@ -141,8 +138,9 @@ export default function Map() {
                 mapboxMap.flyTo({
                     center: office,
                     zoom: 7,
+                    duration: 2000,
                 });
-            }, 4);
+            }, 3.25);
 
             timeline.to(
                 [topLeftCornerRef.current, bottomRightCornerRef.current],
@@ -150,7 +148,7 @@ export default function Map() {
                     opacity: 1,
                     duration: 0.075,
                 },
-                5.5
+                5.25
             );
 
             timeline.to([topLeftCornerRef.current, bottomRightCornerRef.current], {
@@ -192,8 +190,9 @@ export default function Map() {
                 mapboxMap.flyTo({
                     center: office,
                     zoom: 12,
+                    duration: 2000,
                 });
-            }, 6);
+            }, 5.5);
 
             timeline.to(
                 [topLeftCornerRef.current, bottomRightCornerRef.current],
@@ -201,7 +200,7 @@ export default function Map() {
                     opacity: 1,
                     duration: 0.075,
                 },
-                8.5
+                7.5
             );
 
             timeline.to([topLeftCornerRef.current, bottomRightCornerRef.current], {
@@ -244,8 +243,10 @@ export default function Map() {
                     center: office,
                     zoom: 18,
                     pitch: 60,
+                    bearing: 180,
+                    duration: 3000,
                 });
-            }, 9);
+            }, 7.75);
 
             timeline.to(
                 [topLeftCornerRef.current, bottomRightCornerRef.current],
@@ -253,7 +254,7 @@ export default function Map() {
                     opacity: 1,
                     duration: 0.075,
                 },
-                11
+                10.75
             );
 
             timeline.to([topLeftCornerRef.current, bottomRightCornerRef.current], {
@@ -293,7 +294,7 @@ export default function Map() {
 
             timeline.add(() => {
                 rotateCamera();
-            }, 11.5);
+            }, 11);
         };
 
         marker.current = new mapboxgl.Marker({ color: "#4d8396" });
