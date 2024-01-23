@@ -1,0 +1,17 @@
+.perspective {
+    perspective: 100vw;
+}
+
+.glow {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 200%;
+    aspect-ratio: 1;
+    background: radial-gradient(50% 50%, white, transparent);
+    pointer-events: none;
+    mix-blend-mode: soft-light;
+    opacity: 0;
+}
