@@ -28,6 +28,7 @@ export default function Map() {
             style: "mapbox://styles/joeydi/clrpe9lmz007401qqcrsngr43",
             center: initial,
             zoom: 4,
+            interactive: false,
         });
 
         let initialTimestamp;
