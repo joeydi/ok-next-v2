@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Card from "@/components/Card";
 import FadeIn from "@/components/FadeIn";
 
 const projects = [
@@ -70,15 +71,17 @@ export default function Portfolio() {
                         <h1 className="text-mint">Portfolio</h1>
                     </FadeIn>
                     <FadeIn delay="0.1">
-                        <div className="grid grid-cols-12 gap-6 md:gap-12 lg:gap-24">
+                        <div className="grid grid-cols-12 gap-y-12 gap-x-6 lg:gap-x-12">
                             {projects.map((project, i) => {
                                 return (
-                                    <FadeIn key={`col-${i}`} delay={0.05 * i} className="sm:col-span-6 xl:col-span-4">
-                                        <a className="block" href={project.link} target="_blank">
-                                            <Image className="mb-6" src={project.image} width="800" height="561" alt="" />
-                                            <h4 className="mb-2 uppercase font-bold">{project.name}</h4>
-                                            <p>{project.description}</p>
-                                        </a>
+                                    <FadeIn key={`col-${i}`} delay={0.05 * i} className="col-span-12 md:col-span-6 xl:col-span-4">
+                                        <Card href={project.link} target="_blank">
+                                            <Image src={project.image} width="800" height="561" alt="" />
+                                            <div className="p-8">
+                                                <h2 className="h4 mb-2 uppercase font-bold text-balance">{project.name}</h2>
+                                                <p>{project.description}</p>
+                                            </div>
+                                        </Card>
                                     </FadeIn>
                                 );
                             })}
