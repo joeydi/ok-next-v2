@@ -18,7 +18,6 @@ export default function Card({ href, target = "_self", children, ...rest }) {
         const rotationY = gsap.utils.mapRange(0, rect.width, maxRotation, -maxRotation, x);
         const glowX = gsap.utils.mapRange(0, rect.width, -100, 0, x);
         const glowY = gsap.utils.mapRange(0, rect.height, -100, 0, y);
-        console.log(glowX, glowY);
 
         gsap.to(cardRef.current, {
             rotationX,
