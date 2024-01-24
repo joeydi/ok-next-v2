@@ -10,7 +10,7 @@
     transform: translate(-50%, -50%);
     width: 200%;
     aspect-ratio: 1;
-    background: radial-gradient(50% 50%, white, transparent);
+    background: radial-gradient(closest-side at center, white, transparent);
     pointer-events: none;
     mix-blend-mode: soft-light;
     opacity: 0;
