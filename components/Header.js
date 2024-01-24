@@ -130,14 +130,14 @@ export default function Header() {
             <div ref={containerRef} className="container relative">
                 <div className="grid grid-cols-2 gap-4">
                     <nav ref={navRef} className={styles.nav}>
-                        {/* <button ref={navToggleRef} className={`${styles.navtoggle} uppercase font-bold`}>
-                            Menu
-                        </button> */}
+                        {/* <button ref={navToggleRef} className={`${styles.navtoggle} uppercase font-black`}>Menu</button> */}
                         <div ref={navLinksRef} className={`${styles.navlinks} flex flex-col items-start`}>
                             {links.map((link, i) => (
                                 <Link
                                     key={`link-${i}`}
-                                    className={`${styles.link} ${pathname == link.href ? styles.active : ""} uppercase font-bold`}
+                                    className={`${styles.link} ${
+                                        pathname == link.href ? styles.active : ""
+                                    } uppercase font-black`}
                                     href={link.href}
                                     onClick={() => clickHandler(i)}>
                                     {link.title}
@@ -145,7 +145,7 @@ export default function Header() {
                             ))}
                         </div>
                     </nav>
-                    <p className="leading-5	m-0 uppercase text-mint font-bold text-right">Design &amp; Development For the Web</p>
+                    <p className="leading-5	m-0 uppercase text-mint font-black text-right">Design &amp; Development For the Web</p>
                 </div>
                 <svg className={styles.corner} width="100px" height="100px" viewBox="0 0 100 100">
                     <polyline

@@ -2,16 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "https://use.typekit.net/gzr7byz.css";
-
 @import "@/styles/functions";
 @import "@/styles/variables";
 @import "@/styles/mixins";
 @import "@/styles/typography";
 
 :root {
-    --font-sans: industry, sans-serif;
-    --font-mono: source-code-pro, monospace;
+    --font-sans: "manifold-cf", sans-serif;
+    --font-mono: "cartograph-cf", monospace;
 }
 
 body {
@@ -40,4 +38,12 @@ main {
 
 .section-padding {
     padding: clampValues(60, 100, $sm, $xl) 0;
+}
+
+.section-padding-top {
+    padding-top: clampValues(60, 100, $sm, $xl);
+}
+
+.section-padding-bottom {
+    padding-bottom: clampValues(60, 100, $sm, $xl);
 }
