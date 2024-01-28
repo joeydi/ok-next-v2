@@ -31,7 +31,7 @@ const testimonials = [
 
 export default function Testimonials() {
     return (
-        <section>
+        <section className="section-margin">
             <div className="container">
                 <div className="section-padding">
                     <h2 className="h3">Kicking Ass and Making Friends</h2>

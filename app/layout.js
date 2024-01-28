@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import SmoothScroll from "@/components/SmoothScroll";
 import Footer from "@/components/Footer";
 import "@/styles/globals.scss";
 
@@ -15,8 +16,10 @@ export default function RootLayout({ children }) {
             </head>
             <body>
                 <Header />
-                {children}
-                <Footer />
+                <SmoothScroll>
+                    {children}
+                    <Footer />
+                </SmoothScroll>
             </body>
         </html>
     );
