@@ -145,7 +145,7 @@ export default function Header() {
                             ))}
                         </div>
                     </nav>
-                    <p className="leading-5	m-0 uppercase text-mint font-black text-right">Design &amp; Development For the Web</p>
+                    <p className="leading-5	m-0 uppercase text-mint font-black">Design &amp; Development For the Web</p>
                 </div>
                 <svg className={styles.corner} width="100px" height="100px" viewBox="0 0 100 100">
                     <polyline
