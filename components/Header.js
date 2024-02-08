@@ -25,15 +25,15 @@ export default function Header() {
             href: "/",
         },
         {
-            title: "Portfolio",
+            title: "What I've Done",
             href: "/portfolio",
         },
         {
-            title: "Services",
+            title: "What I'm Selling",
             href: "/services",
         },
         {
-            title: "Contact",
+            title: "Where I'm At",
             href: "/contact",
         },
     ];
