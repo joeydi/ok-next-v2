@@ -21,7 +21,7 @@ const testimonials = [
         image: "/testimonials/tom.jpg",
     },
     {
-        quote: "“Joe has a rare combination of being great at both design and development. He designed and developed, in a short amount of time, a geolocation search application that could be customized by third parties in a framework he had little previous experience in.\n\n5/5 Would work with again”",
+        quote: "“Joe has a rare combination of being great at both design and development. He designed and developed, in a short amount of time, a geolocation search application that could be customized by third parties in a framework he had little previous experience in.\n\n5/5 — Would work with again”",
         name: "Jeremy Aldrich",
         title: "Senior Software Developer",
         image: "/testimonials/jeremy.jpg",
