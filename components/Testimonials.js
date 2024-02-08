@@ -1,6 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
-import test from "node:test";
+import Paragraphs from "./Paragraphs";
 
 const testimonials = [
     {
@@ -16,16 +15,16 @@ const testimonials = [
         image: "/testimonials/kathleen.jpg",
     },
     {
-        quote: "“Joe has a rare combination of being great at both design and development. He designed and developed, in a short amount of time, a geo location search application that could be customized by third parties in a framework he had little previous experience in. 5/5 Would work with again”",
-        name: "Jeremy Aldrich",
-        title: "Senior Software Developer",
-        image: "/testimonials/jeremy.jpg",
-    },
-    {
         quote: "“Working with Okay Plus has been a pleasure and the results are fantastic. Joe created our website 10 years ago, and when it came time to update it, he was who we turned to. He listened to what we wanted and worked with us to refine the design. In the end he was able to produce a custom designed website that looks great and is easy to manage.”",
         name: "Tom Bachman, AIA",
         title: "Principal Architect",
         image: "/testimonials/tom.jpg",
+    },
+    {
+        quote: "“Joe has a rare combination of being great at both design and development. He designed and developed, in a short amount of time, a geolocation search application that could be customized by third parties in a framework he had little previous experience in.\n\n5/5 Would work with again”",
+        name: "Jeremy Aldrich",
+        title: "Senior Software Developer",
+        image: "/testimonials/jeremy.jpg",
     },
 ];
 
@@ -42,8 +41,8 @@ export default function Testimonials() {
                         <div
                             key={`testimonial-${i}`}
                             className={`col-span-12 md:col-span-6 xl:col-span-5 ${i % 2 ? "xl:col-start-7" : ""}`}>
-                            <blockquote className="max-w-[480px]">
-                                <p className="text-pretty">{testimonial.quote}</p>
+                            <blockquote className="max-w-[480px] text-pretty">
+                                <Paragraphs>{testimonial.quote}</Paragraphs>
                                 <cite className="flex gap-4 items-center not-italic">
                                     <Image
                                         className="w-16 rounded-full"
