@@ -67,11 +67,10 @@ export default function AboutMe() {
                                 (the one on the left)
                             </h2>
                         </div>
-                        <div className="self-end w-1/2 max-w-[480px]">
+                        <div className="self-end w-1/2 max-w-[400px]">
                             <p>
-                                I&rsquo;m a digital design and development freelancer based in Burlington, VT. Throughout my
-                                career, I&rsquo;ve worked with a wide variety of organizations, including startups, publicly
-                                traded companies, and government agencies.
+                                I&rsquo;m a digital design and development freelancer in Burlington, VT. I'm easy to work with and
+                                I help businesses like yours stand out with sharp design and modern technology.
                             </p>
                             <Link className="font-bold uppercase text-mint" href="/contact">
                                 Get In Touch

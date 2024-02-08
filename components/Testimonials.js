@@ -35,7 +35,7 @@ export default function Testimonials() {
             <div className="container">
                 <div className="section-padding">
                     <h2 className="h3">Kicking Ass and Making Friends</h2>
-                    <p>Here are a few things people enjoy about working with me.</p>
+                    <p>Here&rsquo;s few things people enjoy about working with me.</p>
                 </div>
                 <div className="grid grid-cols-12 gap-y-12 gap-6 md:gap-12">
                     {testimonials.map((testimonial, i) => (
